@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Inscriptions</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    .btn {
+      background: #00c9ff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #007bff;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      animation: float 20s linear infinite;
+    }
+
+    .bubble:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-delay: 0s; }
+    .bubble:nth-child(2) { width: 40px; height: 40px; left: 25%; animation-delay: 5s; }
+    .bubble:nth-child(3) { width: 60px; height: 60px; left: 40%; animation-delay: 10s; }
+    .bubble:nth-child(4) { width: 90px; height: 90px; left: 60%; animation-delay: 15s; }
+    .bubble:nth-child(5) { width: 50px; height: 50px; left: 75%; animation-delay: 20s; }
+
+    @keyframes float {
+      0% {
+        bottom: -100px;
+        transform: translateX(0) scale(1);
+      }
+      100% {
+        bottom: 110%;
+        transform: translateX(100px) scale(1.2);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur la plateforme d’inscription</h1>
+  <p>Choisissez le formulaire correspondant pour vous enregistrer. Merci de remplir toutes les informations demandées avec soin.</p>
+
+  <div class="button-container">
+    <a href="bacenta.html" class="btn">Formulaire Bacentas</a>
+    <a href="Anagkazo.html" class="btn">Formulaire Anagkazo</a>
+  </div>
+
+  <!-- Bulles d’animation -->
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+</body>
+</html>
